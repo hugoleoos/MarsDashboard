@@ -1,0 +1,151 @@
+/* -------------------  MOBILE  --------------------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  min-height: 100vh;
+}
+
+header {
+  /* header styles */
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.image-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.main {
+  display: flex;
+}
+
+.rover-image {
+  width: 500px;
+}
+
+ul li {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  margin: 1.5em;
+  cursor: pointer;
+  padding: 1em;
+  background: rgb(43, 43, 43);
+  position: relative;
+  color: white;
+  border-radius: 5px;
+}
+
+ul li::before,
+ul li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 5px;
+  width: 105%;
+  transition: all 0.4s;
+}
+
+ul li::before {
+  left: 0%;
+  height: 130%;
+  background: linear-gradient(to right, #021b79, #0575e6);
+}
+
+ul li::after {
+  left: -10%;
+  height: 120%;
+  background: #ffffff56;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+}
+
+ul li:hover::before {
+  transform: translateX(-2.5%);
+}
+
+ul li:hover::after {
+  transform: translateX(15%);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  /* footer styles */
+  text-align: center;
+  padding: 16px;
+  border-top: 1px dashed rgb(76, 13, 250);
+}
+
+
+
+/* -------------------  TABLET  --------------------- */
+@media (min-width: 768px) {
+
+  /* use mobile */
+  .rover-image {
+    width: 100px;
+  }
+
+  .rover-content {
+    font-size: 12px;
+  }
+
+  ul li {
+    width: 120px;
+    font-size: 12px;
+
+  }
+}
+
+
+/* -------------------  DESKTOP  -------------------- */
+
+@media (min-width: 1224px) {
+
+  /* use mobile */
+  .rover-image {
+    width: 500px;
+  }
+
+  .rover-content {
+    font-size: 24px;
+  }
+}
+
+/* -------------------  LARGE SCREENS  -------------- */
+
+@media (min-width: 1824px) {
+
+  /* use mobile */
+
+}
